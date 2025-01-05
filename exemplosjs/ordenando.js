@@ -75,7 +75,7 @@ function ordenar() {
     const algoritmoSelect = document.getElementById('algoritmo');
     const valores = [];
     for (let i = 0; i < valoresList.children.length; i++) {
-        valores.push(parseInt(valoresList.children[i].innerHTML));
+        valores.push(eval(valoresList.children[i].innerHTML));
     }
 
     switch (algoritmoSelect.value) {
@@ -97,7 +97,7 @@ function misturar() {
     const valoresList = document.getElementById('valores');
     const valores = [];
     for (let i = 0; i < valoresList.children.length; i++) {
-        valores.push(parseInt(valoresList.children[i].innerHTML));
+        valores.push(eval(valoresList.children[i].innerHTML));
     }
 
     shuffle(valores, valores.length);
